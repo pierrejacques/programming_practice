@@ -1,3 +1,5 @@
+// 给定一个int组成的序列，至多用一次交换使之取得尽可能小的字典序
+
 const getMins = arr => {
   let min = arr[arr.length - 1];
   const pos = [];
@@ -28,7 +30,7 @@ const exchangeArr = (arr, i, j) => {
   return tmpArr;
 };
 
-const optimize = arr => {
+const main = arr => {
   const minPos = getMins(arr);
   const n = arr.length;
   for (i = 0; i < n-1; i++) {
@@ -39,4 +41,4 @@ const optimize = arr => {
   return arr.join(' ');
 }
 
-console.log(optimize([1,2,3,4,5,8,6]));
+export default main;
